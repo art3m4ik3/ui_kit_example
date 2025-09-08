@@ -13,6 +13,8 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(onPressed: this.onPressed, child: Text(this.text));
+    final theme = Theme.of(context).extension();
+    return FilledButton(onPressed: this.onPressed,
+        child: Text(this.text, style: TextStyle(color: theme.palette.text),));
   }
 }
